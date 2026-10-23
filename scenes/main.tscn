@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c6qotbjnjw6e4"]
+
+[ext_resource type="PackedScene" uid="uid://c70fg5p4qjueb" path="res://scenes/wizard.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dbxplqed4qe2s" path="res://scripts/left_crosshair.gd" id="2_0wfyh"]
+
+[node name="Main" type="Node2D" unique_id=320451129]
+
+[node name="Wizard" parent="." unique_id=423754239 instance=ExtResource("1_o5qli")]
+position = Vector2(576, 500)
+
+[node name="Left Crosshair" type="Label" parent="." unique_id=1119850755]
+offset_left = 400.0
+offset_top = 200.0
+offset_right = 500.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 100
+text = "O"
+script = ExtResource("2_0wfyh")
+
+[node name="Right Crosshair" type="Label" parent="." unique_id=160431613]
+offset_left = 750.0
+offset_top = 200.0
+offset_right = 850.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 100
+text = "O"
