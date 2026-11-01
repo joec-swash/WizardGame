@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c70fg5p4qjueb" path="res://scenes/wizard.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dbxplqed4qe2s" path="res://scripts/left_crosshair.gd" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://pisnjl5urb6m" path="res://scripts/right_crosshair.gd" id="3_sugp2"]
 
 [node name="Main" type="Node2D" unique_id=320451129]
 
@@ -24,3 +25,4 @@ offset_right = 850.0
 offset_bottom = 300.0
 theme_override_font_sizes/font_size = 100
 text = "O"
+script = ExtResource("3_sugp2")

@@ -1,5 +1,8 @@
 extends Label
 
+# Creates a movement-speed variable.
+var move_speed: float = 500.0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,4 +11,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	var direction # L14 - Declares 'direction' -- L15 - Assigns the value.
+	direction = Input.get_vector("left_aim_left", "left_aim_right", "left_aim_up", "left_aim_down")
+	# Moves crosshair when stick is moved.
+	position += direction * move_speed * delta
+	# Finds width and height of game window.
+	var viewport_size = get_viewport_rect().size 
+	# Restricts positions of crosshair.
+	position.x = clamp(position.x, 0, viewport_size.x - size.x) # X
+	position.y = clamp(position.y, 0, viewport_size.y - size.y) # Y
